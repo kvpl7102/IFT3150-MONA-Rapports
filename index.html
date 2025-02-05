@@ -1,93 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rapport pour le projet IFT3150 de Miliya Ai, Hiver 2024">
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/140186505?s=200&v=4">
-    <link rel="stylesheet" href="https://stackedit.io/style.css"/>
-    <title>Rapport IFT3150</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: #ffee81;
-            position: fixed;
-            width: 100%;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: black;
-            text-align: center;
-            padding: 10px 16px;
-            text-decoration: none;
-        }
-
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: black;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
-
-        .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #f9db07;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 160px;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f9db07;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rapport pour le projet IFT3150 de Vi Phung, Hiver 2025">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/140186505?s=200&v=4">
+  <link rel="stylesheet" href="https://stackedit.io/style.css"/>
+  <link rel="stylesheet" href="styles.css">
+  <title>Rapport IFT3150</title>
 </head>
-
 <body>
-<nav>
-    <div class="dropdown">
-        <button href="#hebdomaire" class="dropbtn">Rapport Hebdomadaire
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#semaine1">Semaine 1 (Jan 13 - Jan 18)</a>
-            <a href="#semaine2">Semaine 2 (Jan 20 - Jan 25)</a>
-            <!-- 
-            <a href="#semaine3">Semaine 3 (Jan 25- Feb 1)</a>
+  <nav>
+    <div class="dropdown">  
+      <button href="#hebdomaire" class="dropbtn">Rapport Hebdomadaire
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#semaine1">Semaine 1 (Jan 13 - Jan 17)</a>
+        <a href="#semaine2">Semaine 2 (Jan 20 - Jan 24)</a>
+        <a href="#semaine3">Semaine 3 (Jan 27 - Jan 31)</a>
+        <!-- 
             <a href="#semaine4">Semaine 4 (Feb 1- Feb 8)</a>
             <a href="#semaine5">Semaine 5 (Feb 8- Feb 15)</a>
             <a href="#semaine6">Semaine 6 (Feb 15- Feb 22)</a>
@@ -98,7 +30,7 @@
             <a href="#semaine11">Semaine 11 (Mar 26- Avr 2)</a>
             <a href="#semaine12">Semaine 12 (Avr 2- Avr 9)</a>
             <a href="#semaine13">Semaine 13 (Avr 9- Avr 16)</a> -->
-        </div>
+      </div>
     </div>
     <a href="#rapport">Rapport Final</a>
     <!-- <div class="dropdown">
@@ -110,54 +42,116 @@
             <a href="#install">Installation</a>
         </div>
     </div> -->
-</nav>
+  </nav>
 
-<div style="padding:50px">
+  <div style="padding:50px">
     <header>
-        <div style="display: flex;justify-content: center">
-            <a class="logo_lien" href="https://picasso.iro.umontreal.ca/~mona/">
-                <img src="https://picasso.iro.umontreal.ca/~mona/storage/logo.jpg" alt="logo mona" width="50%">
-            </a>
-            <div style="text-align: center;">
-                <h1>Rapport IFT3150</h1>
-                <h2>Vi Phung</h2>
-            </div>
+      <div style="display: flex;justify-content: center">
+        <a class="logo_lien" href="https://picasso.iro.umontreal.ca/~mona/">
+          <img src="https://picasso.iro.umontreal.ca/~mona/storage/logo.jpg" alt="logo mona" width="50%">
+        </a>
+        <div style="text-align: center;">
+          <h1>Rapport IFT3150</h1>
+          <h2>Vi Phung</h2>
         </div>
+      </div>
     </header>
 
     <div>
-        <h3>À propos</h3>
-        <p>C'est un projet de développement d'une application mobile par l'organisme <a href="https://monamontreal.org">
-                MONA</a>, visant à découvrir, photographier et collectionner de l'art public.</p>
-        <p>J'ai rejoint l'équipe de développement du serveur MONA dans le cadre du cours projet IFT3150 en Hiver 2025.</p>
+      <h3>À propos</h3>
+      <p>C'est un projet de développement d'une application mobile par l'organisme <a href="https://monamontreal.org">MONA</a>, visant à découvrir, photographier et collectionner de l'art public.</p>
+      <p>J'ai rejoint l'équipe de développement du serveur MONA dans le cadre du cours projet IFT3150 en Hiver 2025.</p>
     </div>
 
     <div id="hebdomaire">
-        <h3>Rapport hebdomadaire</h3>
-        <h4 style="text-align: center" id="semaine1">Semaine 1 (Jan 13 - Jan 18)</h4>
-        <p>Ma première rencontre avec l'équipe MONA a commencé avec Lena et Christian - un autre étudiant comme moi qui participe à ce projet dans le cadre du cours IFT3150 , elle nous a raconté l'histoire et le
-            <a href="https://monamontreal.org/apropos.html">développement</a> de ce projet. J'ai été très impressionné par la façon dont ils ont réussi à rassembler une équipe de bénévoles pour créer une application mobile qui permet aux utilisateurs 
-            de découvrir, photographier et collectionner de l'art public. J'ai également été impressionné par la façon dont ils ont réussi à obtenir des subventions pour financer le projet.
-        </p>
-        <p> Notre équipe est également très bien organisée. L'équipe développement multidisciplinaire est dirigé par Lena Krause avec une collaboration entre le département de l'histoire de l'art et le departément de l'information et de recherche opérationnelle. Nous utilisons Element pour la communication de
-            groupe.
-        </p>
-        <p>Tout d'abord, ma tâche principale est de créer mon lien des rapports, puis l'unifier sur le site de l'équipe, et me familiariser de l'application mobile MONA.</p>
-        </p>
+      <h3>Rapport hebdomadaire</h3>
+      
+      <!-- Week 1 -->
+      <div class="weekly-report" id="semaine1">
+        <div class="weekly-header">Semaine 1 (Jan 13 - Jan 17)</div>
+        <div class="report-content">
+          <p>Ma première rencontre avec l'équipe MONA a commencé avec Lena et Christian – un autre étudiant participant au projet IFT3150. Lena nous a raconté l'histoire et le <a href="https://monamontreal.org/apropos.html">développement</a> du projet, et j'ai été très impressionné par leur capacité à rassembler une équipe de bénévoles et obtenir des subventions pour financer l'application mobile.</p>
+          <p>L'équipe est très bien organisée, dirigée par Lena Krause, et collabore entre le département d'histoire de l'art et celui de l'information et de recherche opérationnelle.</p>
+          <p>Ma tâche initiale était de créer des liens pour les rapports et de me familiariser avec l'application mobile MONA.</p>
+        </div>
+      </div>
+      
+      <!-- Week 2 -->
+      <div class="weekly-report" id="semaine2">
+        <div class="weekly-header">Semaine 2 (Jan 20 - Jan 24)</div>
+        <div class="report-content">
+          <p>Cette semaine, j'ai eu la première rencontre en présentiel avec certains membres de l'équipe MONA, notamment Lena, Christian, Tiffany et Sarah. Lena nous a présenté en détail l'interface admin de MONA ainsi que l'espace Figma contenant les maquettes de l'application mobile. J'ai fourni des suggestions sur l'expérience utilisateur.</p>
+          <p>On a décidé que je travaillerais sur le côté serveur du projet. Initialement, je devais apprendre à configurer et installer le serveur avec Simon, mais il a dû s'absenter pour des raisons de santé. J'ai donc étudié la documentation des étudiants précédents, notamment Corélie, pour me familiariser avec la configuration du serveur.</p>
+        </div>
+      </div>
+      
+      <!-- Week 3 -->
+      <div class="weekly-report" id="semaine3">
+        <div class="weekly-header">Semaine 3 (Jan 27 - Jan 31)</div>
+        <div class="report-content">
+          <p>Cette semaine, j'ai eu une réunion avec Lena, Christian, Tiffany et Simon. C'était la première rencontre physique avec Simon, après une réunion en ligne antérieure. Simon m'a brièvement expliqué la structure du serveur MONA et m'a aidé pour l'installation, la configuration du serveur ainsi que la migration des bases de données.</p>
+          <p>J'ai poursuivi ma collaboration avec Simon pour créer une pull request dans le répertoire <code>mona-server</code> intitulée "Generation documentation for the application's APIs and code linting".</p>
+          <p>La tâche se décompose en différentes étapes :</p>
+          <ul>
+            <li>
+              <strong>Génération de la documentation OpenAPI</strong> :
+              <ul>
+                <li>L'objectif était de générer la documentation OpenAPI pour les routes API existantes.</li>
+                <li>J'ai rencontré des problèmes lors de l'installation de <code>dedoc/scramble</code> à cause de conflits de dépendances. J'ai résolu le problème en utilisant la commande avec Sail et en ajoutant le drapeau <code>-W</code> pour autoriser toute installation, quelle que soit la version, pour permettre la mise à jour des dépendances :
+                  <pre><code>./vendor/laravel/sail/bin/sail composer require dedoc/scramble:* -W</code></pre>
+                  Après une installation réussie, la documentation générée est accessible via la route <code>/docs/api</code> (interface conviviale) et via <code>/docs/api.json</code> (le document JSON complet conforme à la spécification OpenAPI).
+                </li>
+                <li>J'ai ajouté des commentaires PHPDoc détaillés dans les méthodes des contrôleurs afin d'enrichir la documentation générée.</li>
+                <li>Après la génération, j'ai rencontré des erreurs d'affichage dans la documentation sur la route <code>/docs/api</code> (erreurs liées aux commentaires inutilisés et aux problèmes de validation). Pour résoudre ces problèmes, j'ai :
+                  <ul>
+                    <li>Supprimé les blocs de code commentés inutiles (ex. la boucle <code>foreach</code> dans le UserPlaceController).</li>
+                    <li>Corrigé la validation en assignant d'abord les paramètres de route à une variable, par exemple :
+                      <pre><code>$params = request()->route()->parameters();
+Validator::make($params, [
+    'artist' => ['integer', Rule::exists('artists', 'id')]
+])->validate();</code></pre>
+                    </li>
+                    <li>Ajusté le code pour s'assurer que seules les variables appropriées sont transmises aux fonctions de validation.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Linting du code</strong> :
+              <ul>
+                <li>J'ai installé Duster pour le linting du code PHP et Prettier pour formater les vues.</li>
+                <li>Pour le PHP, j'ai exécuté la commande suivante pour lancer Duster et auto-corriger les erreurs de style :
+                  <pre><code>./vendor/laravel/sail/bin/sail php ./vendor/bin/duster lint
+./vendor/laravel/sail/bin/sail php ./vendor/bin/duster fix</code></pre>
+                </li>
+                <li>Pour les vues (fichiers Blade), après avoir installé Prettier et le plugin dédié (<code>prettier-plugin-blade</code>), j'ai lancé :
+                  <pre><code>./vendor/laravel/sail/bin/sail npx prettier --write "resources/views/**/*.blade.php"</code></pre>
+                  La création d'un fichier <code>.prettierrc</code> est optionnelle, mais recommandée pour définir vos règles de formatage de manière cohérente. Par exemple, mon fichier <code>.prettierrc</code> contient :
+                  <pre><code>{
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 80,
+    "plugins": ["prettier-plugin-blade"]
+}</code></pre>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Validation avec l'OpenAPI Bundle Validator</strong> :
+              <ul>
+                <li>Cette étape vise à tester que l'API fonctionne toujours comme attendu en validant les réponses de l'API par rapport à la documentation générée.</li>
+                <li>Cette étape n'est pas encore terminée pour cette semaine en raison d'un problème de configuration (la valeur de configuration retournait un tableau au lieu d'une chaîne). Des ajustements supplémentaires sont nécessaires.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <h4 style="text-align: center" id="semaine1">Semaine 2 (Jan 20 - Jan 25)</h4>
-        <p>
-            Cette semaine, j'ai eu la première rencontre en présentiel avec quelques membres de l'équipe MONA, notamment Lena, Christian, Tiffany et Sarah.
-            Lena nous a présenté en détail l'interface admin de MONA, ainsi que l'espace Figma où sont stockés les maquettes de l'application mobile. Elle m'a également
-            demandé mes retours sur l'application mobile MONA, ce à quoi j'ai fourni quelques suggestions sur l'expérience utilisateur.
-            <br>
-            On a décidé que je aurais travaillé sur le côté serveur du projet. Initialement, j'aurais du travailler avec Simon pour apprendre à configurer et installerinstaller le serveur, mais il a dû s'absenter pour des raisons de santé.
-            Donc, je me suis concentré sur la lecture de la documentation des autres étudiants qui avaient travaillé sur le même domaine l'année dernière, notamment Corélie pour me familiariser avec la configuration du serveur.  
-        </p>
-
-        
-</div>
-
+  <script src="script.js"></script>
 
 </body>
 </html>

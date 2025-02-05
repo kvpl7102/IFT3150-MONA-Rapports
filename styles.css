@@ -1,0 +1,75 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #ffee81;
+      position: fixed;
+      width: 100%;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: black;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: #f9db07;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background-color: #f9db07;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Styles for collapsible weekly reports */
+    .weekly-report {
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .weekly-header {
+      background-color: #f1f1f1;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+    }
+    .report-content {
+      display: none;
+      padding: 10px 20px;
+      background-color: #fff;
+    }
