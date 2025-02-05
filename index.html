@@ -96,12 +96,13 @@
             <li>
               <strong>Génération de la documentation OpenAPI</strong> :
               <ul>
-                <li>L'objectif était de générer la documentation OpenAPI pour les routes API existantes.</li>
+                <li>L'objectif était de générer la documentation OpenAPI pour les routes API existantes.</li><br>
                 <li>J'ai rencontré des problèmes lors de l'installation de <code>dedoc/scramble</code> à cause de conflits de dépendances. J'ai résolu le problème en utilisant la commande avec Sail et en ajoutant le drapeau <code>-W</code> pour autoriser toute installation, quelle que soit la version, pour permettre la mise à jour des dépendances :
                   <pre><code>./vendor/laravel/sail/bin/sail composer require dedoc/scramble:* -W</code></pre>
-                  Après une installation réussie, la documentation générée est accessible via la route <code>/docs/api</code> (interface conviviale) et via <code>/docs/api.json</code> (le document JSON complet conforme à la spécification OpenAPI).
+                  Après une installation réussie, la documentation générée est accessible via la route <code>/docs/api</code> (interface utilisateur) et via <code>/docs/api.json</code> (le document JSON complet conforme à la spécification OpenAPI).
                 </li>
-                <li>J'ai ajouté des commentaires PHPDoc détaillés dans les méthodes des contrôleurs afin d'enrichir la documentation générée.</li>
+                <br>
+                <li>J'ai ajouté des commentaires PHPDoc détaillés dans les méthodes des contrôleurs afin d'enrichir la documentation générée.</li><br>
                 <li>Après la génération, j'ai rencontré des erreurs d'affichage dans la documentation sur la route <code>/docs/api</code> (erreurs liées aux commentaires inutilisés et aux problèmes de validation). Pour résoudre ces problèmes, j'ai :
                   <ul>
                     <li>Supprimé les blocs de code commentés inutiles (ex. la boucle <code>foreach</code> dans le UserPlaceController).</li>
@@ -116,6 +117,7 @@ Validator::make($params, [
                 </li>
               </ul>
             </li>
+            <br>
             <li>
               <strong>Linting du code</strong> :
               <ul>
@@ -138,6 +140,7 @@ Validator::make($params, [
                 </li>
               </ul>
             </li>
+            <br>
             <li>
               <strong>Validation avec l'OpenAPI Bundle Validator</strong> :
               <ul>
