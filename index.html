@@ -7,7 +7,7 @@
   <link rel="icon" href="https://avatars.githubusercontent.com/u/140186505?s=200&v=4">
   <link rel="stylesheet" href="https://stackedit.io/style.css"/>
   <link rel="stylesheet" href="styles.css">
-  <title>Rapport IFT3150</title>
+  <title>Rapport IFT3150 - H25</title>
 </head>
 <body>
   <nav>
@@ -16,11 +16,11 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#semaine1">Semaine 1 (Jan 13 - Jan 17)</a>
-        <a href="#semaine2">Semaine 2 (Jan 20 - Jan 24)</a>
-        <a href="#semaine3">Semaine 3 (Jan 27 - Jan 31)</a>
+        <a href="#semaine1">Semaine 1</a>
+        <a href="#semaine2">Semaine 2</a>
+        <a href="#semaine3">Semaine 3</a>
+        <a href="#semaine4">Semaine 4</a>
         <!-- 
-            <a href="#semaine4">Semaine 4 (Feb 1- Feb 8)</a>
             <a href="#semaine5">Semaine 5 (Feb 8- Feb 15)</a>
             <a href="#semaine6">Semaine 6 (Feb 15- Feb 22)</a>
             <a href="#semaine7">Semaine 7 (Feb 22- Feb 29)</a>
@@ -51,7 +51,7 @@
           <img src="https://picasso.iro.umontreal.ca/~mona/storage/logo.jpg" alt="logo mona" width="50%">
         </a>
         <div style="text-align: center;">
-          <h1>Rapport IFT3150</h1>
+          <h1>Rapport IFT3150 - H25</h1>
           <h2>Vi Phung</h2>
         </div>
       </div>
@@ -68,7 +68,7 @@
       
       <!-- Week 1 -->
       <div class="weekly-report" id="semaine1">
-        <div class="weekly-header">Semaine 1 (Jan 13 - Jan 17)</div>
+        <div class="weekly-header">Semaine 1</div>
         <div class="report-content">
           <p>Ma première rencontre avec l'équipe MONA a commencé avec Lena et Christian – un autre étudiant participant au projet IFT3150. Lena nous a raconté l'histoire et le <a href="https://monamontreal.org/apropos.html">développement</a> du projet, et j'ai été très impressionné par leur capacité à rassembler une équipe de bénévoles et obtenir des subventions pour financer l'application mobile.</p>
           <p>L'équipe est très bien organisée, dirigée par Lena Krause, et collabore entre le département d'histoire de l'art et celui de l'information et de recherche opérationnelle.</p>
@@ -78,7 +78,7 @@
       
       <!-- Week 2 -->
       <div class="weekly-report" id="semaine2">
-        <div class="weekly-header">Semaine 2 (Jan 20 - Jan 24)</div>
+        <div class="weekly-header">Semaine 2</div>
         <div class="report-content">
           <p>Cette semaine, j'ai eu la première rencontre en présentiel avec certains membres de l'équipe MONA, notamment Lena, Christian, Tiffany et Sarah. Lena nous a présenté en détail l'interface admin de MONA ainsi que l'espace Figma contenant les maquettes de l'application mobile. J'ai fourni des suggestions sur l'expérience utilisateur.</p>
           <p>On a décidé que je travaillerais sur le côté serveur du projet. Initialement, je devais apprendre à configurer et installer le serveur avec Simon, mais il a dû s'absenter pour des raisons de santé. J'ai donc étudié la documentation des étudiants précédents, notamment Corélie, pour me familiariser avec la configuration du serveur.</p>
@@ -87,7 +87,7 @@
       
       <!-- Week 3 -->
       <div class="weekly-report" id="semaine3">
-        <div class="weekly-header">Semaine 3 (Jan 27 - Jan 31)</div>
+        <div class="weekly-header">Semaine 3</div>
         <div class="report-content">
           <p>Cette semaine, j'ai eu une réunion avec Lena, Christian, Tiffany et Simon. C'était la première rencontre physique avec Simon, après une réunion en ligne antérieure. Simon m'a brièvement expliqué la structure du serveur MONA et m'a aidé pour l'installation, la configuration du serveur ainsi que la migration des bases de données.</p>
           <p>J'ai poursuivi ma collaboration avec Simon pour créer une pull request dans le répertoire <code>mona-server</code> intitulée "Generation documentation for the application's APIs and code linting".</p>
@@ -102,19 +102,7 @@
                   Après une installation réussie, la documentation générée est accessible via la route <code>/docs/api</code> (interface utilisateur) et via <code>/docs/api.json</code> (le document JSON complet conforme à la spécification OpenAPI).
                 </li>
                 <br>
-                <li>J'ai ajouté des commentaires PHPDoc détaillés dans les méthodes des contrôleurs afin d'enrichir la documentation générée.</li><br>
-                <li>Après la génération, j'ai rencontré des erreurs d'affichage dans la documentation sur la route <code>/docs/api</code> (erreurs liées aux commentaires inutilisés et aux problèmes de validation). Pour résoudre ces problèmes, j'ai :
-                  <ul>
-                    <li>Supprimé les blocs de code commentés inutiles (ex. la boucle <code>foreach</code> dans le UserPlaceController).</li>
-                    <li>Corrigé la validation en assignant d'abord les paramètres de route à une variable, par exemple :
-                      <pre><code>$params = request()->route()->parameters();
-Validator::make($params, [
-    'artist' => ['integer', Rule::exists('artists', 'id')]
-])->validate();</code></pre>
-                    </li>
-                    <li>Ajusté le code pour s'assurer que seules les variables appropriées sont transmises aux fonctions de validation.</li>
-                  </ul>
-                </li>
+                <li>J'ai commencé à ajouter des commentaires PHPDoc détaillés dans les méthodes des contrôleurs afin d'enrichir la documentation générée.</li><br>
               </ul>
             </li>
             <br>
@@ -151,10 +139,66 @@ Validator::make($params, [
           </ul>
         </div>
       </div>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
+      <!-- Week 4 -->
+      <div class="weekly-report" id="semaine3">
+  <div class="weekly-header">Semaine 4</div>
+  <div class="report-content">
+     <p>
+      Cette semaine, j'ai continué à travailler sur l'écriture des commentaires PHPDoc dans les contrôleurs conformément aux instructions du <a href="https://github.com/MaisonMONA/mona-server/wiki">wiki</a> pour tous les APIs V3 et sur le linting du code. 
+    </p>
+    <p><strong>Problèmes rencontrés:</strong></p>
+    <ul>
+      <li>
+        <strong>Erreur 1: Bloc de commentaires indésirable</strong><br>
+        <em>Problème:</em> Il existe quelques blocs de code commenté (ex. la boucle <code>foreach</code> dans UserPlaceController) apparaissait dans la documentation générée.<br>
+        <em>Résolution:</em> Supprimer ou déplacer ces commentaires afin qu'ils ne soient pas interprétés comme faisant partie de la documentation.<br>
+      </li>
+      <br>
+      <li>
+        <strong>Erreur 2: Problème de type dans ValidateCallExtractor dans certains controlleurs</strong><br>
+        <em>Problème:</em> L'appel à 
+        <pre><code>Validator::make(request()->route()->parameters(), [...])</code></pre>
+        générait l'erreur "Argument #2 ($node) doit être de type PhpParser\Node\Expr\Variable, PhpParser\Node\Expr\MethodCall donné".<br>
+        <img src="assets/err1.png" alt="Capture d'écran de l'erreur 1" style="max-width:50%;"><br>
+        <br>
+        <em>Résolution:</em> Affecter les paramètres de route à une variable avant de les valider, par exemple :
+        <pre><code>$params = request()->route()->parameters();
+Validator::make($params, [
+    'artist' => ['integer', Rule::exists('artists', 'id')]
+])->validate();</code></pre>
+      </li>
+      <br>
+      <li>
+        <strong>Erreur 3: Variable non définie dans UserPhotoController</strong><br>
+        <em>Problème:</em> Dans UserPhotoController, l'erreur "Undefined variable $types" apparaissait car la variable n'était pas définie lors de son utilisation dans la validation.<br>
+        <img src="assets/err2.png" alt="Capture d'écran de l'erreur 4" style="max-width:100%;"></li>
+        <pre><code>$types = ['artwork', 'place', 'heritage'];
+    Validator::make($request->toArray(), [
+    'discovery_id' => ['required', 'integer', 'min:1'],
+    'type' => ['required', Rule::in($types)]
+])->validate();</code></pre>
+        <br>
+        <em>Résolution:</em> Remplacer l'utilisation de <code>$types</code> par une définition en ligne, par exemple :
+        <pre><code>Validator::make($request->toArray(), [
+    'discovery_id' => ['required', 'integer', 'min:1'],
+    'type' => ['required', Rule::in(['artwork', 'place', 'heritage'])]
+])->validate();</code></pre>
+        
+      </li>
+    </ul>
+    <br>
+    <p>
+  J'ai continué à travailler sur la "validation avec OpenAPI Bundle Validator". La plupart des bundles que j'ai trouvés en ligne étaient incompatibles avec notre version PHP actuelle. Cependant, j'ai découvert un bundle validator en développement qui fonctionnait : <a href="https://packagist.org/packages/tyamahori/laravel-openapi-validator">tyamahori/laravel-openapi-validator</a>, qui est un fork de <a href="https://github.com/kirschbaum-development/laravel-openapi-validator">kirschbaum-development/laravel-openapi-validator</a>.<br><br>
+  Je l'ai installé en utilisant Sail, publié la configuration dans <code>config/openapi_validator.php</code>, et spécifié <code>OPENAPI_PATH</code> dans mon fichier <code>.env</code>.<br><br>
+  Toutefois, en raison d'instructions peu claires dans leur documentation, je n'étais pas sûr de la suite à donner, et j'ai décidé de demander l'avis de Simon.
+    </p>
+
+  </div>
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
