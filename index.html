@@ -20,10 +20,10 @@
         <a href="#semaine2">Semaine 2</a>
         <a href="#semaine3">Semaine 3</a>
         <a href="#semaine4">Semaine 4</a>
+        <a href="#semaine5">Semaine 5</a>
+        <a href="#semaine6">Semaine 6</a>
+        <a href="#semaine7">Semaine 7</a>
         <!-- 
-            <a href="#semaine5">Semaine 5 (Feb 8- Feb 15)</a>
-            <a href="#semaine6">Semaine 6 (Feb 15- Feb 22)</a>
-            <a href="#semaine7">Semaine 7 (Feb 22- Feb 29)</a>
             <a href="#semaine8">Semaine 8 (Feb 29- Mar 12)</a>
             <a href="#semaine9">Semaine 9 (Mar 12- Mar 19)</a>
             <a href="#semaine10">Semaine 10 (Mar 19- Mar 26)</a>
@@ -141,9 +141,9 @@
       </div>
 
       <!-- Week 4 -->
-      <div class="weekly-report" id="semaine3">
-  <div class="weekly-header">Semaine 4</div>
-  <div class="report-content">
+      <div class="weekly-report" id="semaine4">
+      <div class="weekly-header">Semaine 4</div>
+      <div class="report-content">
      <p>
       Cette semaine, j'ai continué à travailler sur l'écriture des commentaires PHPDoc dans les contrôleurs conformément aux instructions du <a href="https://github.com/MaisonMONA/mona-server/wiki">wiki</a> pour tous les APIs V3 et sur le linting du code. 
     </p>
@@ -173,6 +173,7 @@ Validator::make($params, [
         <strong>Erreur 3: Variable non définie dans UserPhotoController</strong><br>
         <em>Problème:</em> Dans UserPhotoController, l'erreur "Undefined variable $types" apparaissait car la variable n'était pas définie lors de son utilisation dans la validation.<br>
         <img src="assets/err2.png" alt="Capture d'écran de l'erreur 4" style="max-width:100%;"></li>
+        <em>Code original:</em>
         <pre><code>$types = ['artwork', 'place', 'heritage'];
     Validator::make($request->toArray(), [
     'discovery_id' => ['required', 'integer', 'min:1'],
@@ -194,7 +195,97 @@ Validator::make($params, [
   Toutefois, en raison d'instructions peu claires dans leur documentation, je n'étais pas sûr de la suite à donner, et j'ai décidé de demander l'avis de Simon.
     </p>
 
-  </div>
+      </div>
+
+      <!-- Week 5 -->
+      <div class="weekly-report" id="semaine5">
+      <div class="weekly-header">Semaine 5</div>
+      <div class="report-content">
+        <p>
+          Cette semaine, j'ai travaillé avec Simon pour "rebaser" ma pull request. Concrètement, j'ai appris à regrouper tous mes anciens commits de la pull request en seulement trois commits principaux. Cela rend l'historique de travail beaucoup plus clair. À l'avenir, si je dois apporter des modifications à ma pull request, je pourrai simplement les ajouter à ces commits existants plutôt que d'en créer de nouveaux.
+        </p>
+      </div>
+      </div>
+
+      <!-- Week 6 -->
+      <div class="weekly-report" id="semaine6">
+      <div class="weekly-header">Semaine 6</div>
+      <div class="report-content">
+        <p>
+          Cette semaine, j'ai eu l'occasion de rencontrer le professeur Guy Lapalme, responsable du projet MONA dans le cadre du cours IFT3150. Je lui ai présenté mes travaux effectués chez MONA et mes perspectives de contribution pour la suite. Après discussion avec Lena et Simon, j'ai décidé de continuer à travailler sur les API de mona-server, notamment pour améliorer la "CRUD-bilité" de l'API des badges.
+        </p>
+      </div>
+      </div>
+
+      <!-- Week 7 -->
+      <div class="weekly-report" id="semaine7">
+      <div class="weekly-header">Semaine 7 *</div>
+      <div class="report-content">
+        <p>
+          Cette semaine, je n'ai malheureusement pas pu assister à notre réunion hebdomadaire à cause d'une urgence familiale. J'ai également dû préparer mes examens intra, ce qui m'a laissé moins de temps pour avancer sur mon projet. Toutefois, j'ai pu finaliser la documentation de ma pull request intitulée "Generation of OpenAPI documentation and Code linting".
+        </p>
+        <h3>Génération de la documentation OpenAPI avec Scramble</h3>
+<ol>
+  <li>
+    <strong>Installation de Scramble :</strong><br>
+    Installez Scramble via Sail, en autorisant la mise à jour des dépendances si nécessaire :
+    <pre><code>./vendor/laravel/sail/bin/sail composer require dedoc/scramble:* -W</code></pre>
+    <p>
+      Après installation, Scramble enregistre par défaut deux routes :
+      <br><code>/docs/api</code> – L'interface Web de la documentation,
+      <br><code>/docs/api.json</code> – Le document OpenAPI au format JSON décrivant l'API.
+    </p>
+  </li>
+  <li>
+    <strong>Publication des fichiers :</strong><br>
+    Publiez les fichiers de configuration et la vue :
+    <pre><code>./vendor/laravel/sail/bin/sail php artisan vendor:publish --provider="Dedoc\Scramble\ScrambleServiceProvider"</code></pre>
+    Cela génère notamment <code>config/scramble.php</code> et <code>resources/views/vendor/scramble/docs.blade.php</code>.<br><br>
+    <em>Note&nbsp;:</em> Après avoir cloné ce dépôt, n'oubliez pas d'exécuter <code>composer install</code> (ou via Sail, <code>./vendor/laravel/sail/bin/sail composer install</code>) pour installer Scramble et rendre la route <code>/docs/api</code> accessible.
+  </li>
+  <br>
+  <li>
+    <strong>Autorisation d'accès :</strong><br>
+    Par défaut, Scramble protège la route <code>/docs/api</code> en utilisant la gate <code>viewApiDocs</code> ou le middleware <code>RestrictedDocsAccess</code>.  
+    <ul>
+      <li>
+        <em>Via la gate :</em>
+        <pre><code>Gate::define('viewApiDocs', function (User $user) {
+    return true; 
+});</code></pre>
+      </li>
+      <li>
+        <em>Ou en commentant le middleware dans config/scramble.php :</em>
+        <pre><code>'middleware' => [
+    'web',
+    // Dedoc\Scramble\Http\Middleware\RestrictedDocsAccess::class,
+],</code></pre>
+      </li>
+    </ul>
+    Cela rend la route publique.
+  </li>
+  <br>
+  <li>
+    <strong>Vue publiée (Stoplight Elements) :</strong><br>
+    Le fichier <code>resources/views/vendor/scramble/docs.blade.php</code> inclut le rendu Stoplight Elements :
+    <pre><code>&lt;elements-api
+    apiDescriptionUrl="{{ route('scramble.docs.index') }}"
+    tryItCredentialsPolicy="{{ config('scramble.ui.try_it_credentials_policy', 'include') }}"
+    router="hash"
+    @if(config('scramble.ui.hide_try_it')) hideTryIt="true" @endif
+    logo="{{ config('scramble.ui.logo') }}"
+/&gt;</code></pre>
+    Cela fournit une interface graphique pour consulter et tester l’API.
+  </li>
+</ol>
+
+<p>
+  Une fois tout configuré, la documentation est accessible via <code>http://votre-domaine/docs/api</code> et la spécification JSON via <code>http://votre-domaine/docs/api.json</code>. 
+</p>
+
+      </div>
+      </div>
+
 </div>
 
 
