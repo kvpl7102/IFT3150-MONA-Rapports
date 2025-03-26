@@ -23,9 +23,10 @@
         <a href="#semaine5">Semaine 5</a>
         <a href="#semaine6">Semaine 6</a>
         <a href="#semaine7">Semaine 7</a>
+        <a href="#semaine8">Semaine 8</a>
+        <a href="#semaine9">Semaine 9</a>
         <!-- 
-            <a href="#semaine8">Semaine 8 (Feb 29- Mar 12)</a>
-            <a href="#semaine9">Semaine 9 (Mar 12- Mar 19)</a>
+            
             <a href="#semaine10">Semaine 10 (Mar 19- Mar 26)</a>
             <a href="#semaine11">Semaine 11 (Mar 26- Avr 2)</a>
             <a href="#semaine12">Semaine 12 (Avr 2- Avr 9)</a>
@@ -87,7 +88,7 @@
       
       <!-- Week 3 -->
       <div class="weekly-report" id="semaine3">
-        <div class="weekly-header">Semaine 3</div>
+        <div class="weekly-header">Semaine 3 *</div>
         <div class="report-content">
           <p>Cette semaine, j'ai eu une réunion avec Lena, Christian, Tiffany et Simon. C'était la première rencontre physique avec Simon, après une réunion en ligne antérieure. Simon m'a brièvement expliqué la structure du serveur MONA et m'a aidé pour l'installation, la configuration du serveur ainsi que la migration des bases de données.</p>
           <p>J'ai poursuivi ma collaboration avec Simon pour créer une pull request dans le répertoire <code>mona-server</code> intitulée "Generation documentation for the application's APIs and code linting".</p>
@@ -142,7 +143,7 @@
 
       <!-- Week 4 -->
       <div class="weekly-report" id="semaine4">
-      <div class="weekly-header">Semaine 4</div>
+      <div class="weekly-header">Semaine 4 *</div>
       <div class="report-content">
      <p>
       Cette semaine, j'ai continué à travailler sur l'écriture des commentaires PHPDoc dans les contrôleurs conformément aux instructions du <a href="https://github.com/MaisonMONA/mona-server/wiki">wiki</a> pour tous les APIs V3 et sur le linting du code. 
@@ -196,7 +197,8 @@ Validator::make($params, [
     </p>
 
       </div>
-
+      </div>
+      
       <!-- Week 5 -->
       <div class="weekly-report" id="semaine5">
       <div class="weekly-header">Semaine 5</div>
@@ -284,6 +286,220 @@ Validator::make($params, [
 </p>
 
       </div>
+      </div>
+
+      <!-- Week 8 -->
+      <div class="weekly-report" id="semaine8">
+  <div class="weekly-header">Semaine 8</div>
+  <div class="report-content">
+    <p>
+      <strong>Réunion AGA 2024 avec l'équipe MaisonMONA :</strong><br>
+      &bull; J'ai participé à la réunion de fin d'année 2024 avec toute l'équipe, où nous avons discuté des défis et réussites de l'année précédente, ainsi que des objectifs pour l'année à venir.<br><br>
+
+      <strong>Début du travail sur l'amélioration de la "CRUD-bilité" des routes API :</strong><br>
+      &bull; J'ai commencé à implémenter certaines fonctionnalités manquantes pour plusieurs routes, ainsi que leurs pages dans l'interface admin.<br>
+      &bull; Toutefois, je manque encore de nombreuses ressources et fais face à divers problèmes qui devront être abordés afin de mener à bien cette tâche.
+    </p>
+  </div>
+      </div>
+
+      <!-- Week 9 -->
+      <div class="weekly-report" id="semaine9">
+  <div class="weekly-header">Semaine 9 *</div>
+  <div class="report-content">
+    <p>
+      <strong>Rencontres avec Simon et Corélie :</strong><br>
+      &bull; En plus de la réunion hebdomadaire, j'ai eu plusieurs discussions avec Simon et Corélie afin de clarifier davantage la tâche que je dois accomplir.<br>
+      &bull; Lors de la rencontre avec Corélie, elle m'a aidé à peupler les données depuis la base de données vers ma base locale, tout en me montrant la version actuelle de l'interface admin et le travail qu'elle y a apporté.<br>
+      &bull; En réunion avec Simon, j'ai pu résoudre quelques problèmes Git restants sur ma précédente pull request. Au final, tout s'est bien passé et il a pu faire du merge sur la branch dev et fermer la PR. Nous avons ensuite discuté plus en détail de ma tâche visant à améliorer les fonctionnalités CRUD de l'API. Il m'a partagé plusieurs ressources à étudier et m'a demandé de rédiger un rapport sur l'état actuel des routes CRUD.
+    </p>
+
+    <h3>Résumé Bref de la Tâche</h3>
+    <p>
+      J'ai analysé et synthétisé l'état actuel des routes <code>web.php</code> (partie admin) et <code>api.php</code> (API v3) afin de dresser la liste des fonctionnalités CRUD existantes et manquantes. L'objectif est de déterminer où des routes doivent être ajoutées ou complétées pour couvrir tous les besoins de création, lecture, mise à jour et suppression dans l’application.
+    </p>
+
+    <hr />
+
+    <h2>1. Routes Web (<code>routes/web.php</code>)</h2>
+    <ul>
+      <li><strong>Artworks</strong>
+        <ul>
+          <li><strong>Create:</strong>
+            <ul>
+              <li>GET <code>admin/artworks/create</code> (formulaire)</li>
+              <li>POST <code>admin/artworks</code> (store)</li>
+            </ul>
+          </li>
+          <li><strong>Retrieve:</strong>
+            <ul>
+              <li>GET <code>admin/artworks</code> (index / liste)</li>
+              <li>GET <code>admin/artworks/{artwork}</code> (afficher un élément)</li>
+            </ul>
+          </li>
+          <li><strong>Update:</strong>
+            <ul>
+              <li>GET <code>admin/artworks/{artwork}/edit</code> (formulaire)</li>
+              <li>PUT <code>admin/artworks/{artwork}</code> (mise à jour)</li>
+            </ul>
+          </li>
+          <li><strong>Delete:</strong> <em>Manquant</em></li>
+        </ul>
+      </li>
+
+      <li><strong>Artists</strong>
+        <ul>
+          <li><strong>Create:</strong> <em>Manquant</em></li>
+          <li><strong>Retrieve:</strong>
+            <ul>
+              <li>GET <code>admin/artists</code> (index)</li>
+              <li>GET <code>admin/artists/{artist}</code> (afficher un élément)</li>
+            </ul>
+          </li>
+          <li><strong>Update:</strong> <em>Manquant</em></li>
+          <li><strong>Delete:</strong> <em>Manquant</em></li>
+        </ul>
+      </li>
+
+      <li><strong>Places</strong>
+        <ul>
+          <li><strong>Create:</strong> <em>Manquant</em></li>
+          <li><strong>Retrieve:</strong>
+            <ul>
+              <li>GET <code>admin/places</code> (index)</li>
+              <li>GET <code>admin/places/{place}</code> (afficher un élément)</li>
+            </ul>
+          </li>
+          <li><strong>Update:</strong> <em>Manquant</em></li>
+          <li><strong>Delete:</strong> <em>Manquant</em></li>
+        </ul>
+      </li>
+
+      <li><strong>Heritages</strong>
+        <ul>
+          <li><strong>Create:</strong>
+            <ul>
+              <li>GET <code>admin/heritages/create</code> (formulaire uniquement)</li>
+              <li><em>POST/store manquant</em></li>
+            </ul>
+          </li>
+          <li><strong>Retrieve:</strong>
+            <ul>
+              <li>GET <code>admin/heritages</code> (index)</li>
+              <li>GET <code>admin/heritages/{heritage}</code> (afficher un élément)</li>
+            </ul>
+          </li>
+          <li><strong>Update:</strong> <em>Manquant</em></li>
+          <li><strong>Delete:</strong> <em>Manquant</em></li>
+        </ul>
+      </li>
+
+      <li><strong>Users</strong>
+        <ul>
+          <li><strong>Retrieve:</strong>
+            <ul>
+              <li>GET <code>admin/users</code> (index)</li>
+              <li>GET <code>admin/users/{user}</code> (afficher un élément)</li>
+            </ul>
+          </li>
+          <li><strong>Create / Update / Delete :</strong> <em>Manquants</em></li>
+        </ul>
+      </li>
+
+      <li><strong>Discoveries</strong>
+        <ul>
+          <li><strong>Retrieve:</strong>
+            <ul>
+              <li>GET <code>admin/discoveries</code> (index) + filtrages</li>
+            </ul>
+          </li>
+          <li><strong>Create:</strong>
+            <ul>
+              <li>GET <code>admin/discoveries/CreateArtwork</code> (formulaire)</li>
+              <li>PUT <code>admin/discoveries/StoreArtwork</code> (enregistrer une œuvre)</li>
+            </ul>
+          </li>
+          <li><strong>Update / Delete:</strong> <em>Manquantes</em></li>
+        </ul>
+      </li>
+
+      <li><strong>Autres (Tag, Photo, etc.)</strong>
+        <ul>
+          <li><strong>TagPhotoController, TagDiscoveryController :</strong>
+            <ul>
+              <li>Routes <em>partielles</em> pour ajouter (PUT) ou supprimer (GET) des tags</li>
+            </ul>
+          </li>
+          <li><strong>PhotoController (admin) :</strong> seulement <code>index</code></li>
+          <li><strong>AdjustmentController, DeletionController, ChiffresClesController :</strong> seulement <code>index</code></li>
+          <li><strong>MenuController :</strong>
+            <ul>
+              <li>GET <code>admin/home</code></li>
+              <li>PUT <code>admin/home/search</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>2. Routes API (<code>routes/api/v3/api.php</code>)</h2>
+    <ul>
+      <li><strong>Ressources publiques (sans authentification)</strong>
+        <ul>
+          <li><strong>Artworks, Artists, Places, Badges, Heritages :</strong>
+            <ul>
+              <li>Utilisent <code>Route::resource(...)->only(['index','show'])</code></li>
+              <li><strong>Read seulement :</strong> GET <code>index</code> et GET <code>show</code></li>
+              <li><strong>Create / Update / Delete:</strong> <em>Manquantes</em></li>
+            </ul>
+          </li>
+          <li><strong>lastUpdatedArtworks, lastUpdatedPlaces, lastUpdatedHeritages, LODExport :</strong>
+            <ul>
+              <li>Seulement la méthode <code>index</code></li>
+            </ul>
+          </li>
+          <li><strong>DocumentationController :</strong>
+            <ul>
+              <li>GET <code>doc/artworks</code>, <code>doc/artists</code>, <code>doc/places</code>, etc.</li>
+            </ul>
+          </li>
+          <li><strong>Authentification :</strong>
+            <ul>
+              <li>POST <code>login</code>, POST <code>register</code></li>
+              <li>POST <code>password/email</code>, GET <code>password/reset</code>, POST <code>password/setNewPassword</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Ressources protégées (<code>auth:api</code>)</strong>
+        <ul>
+          <li><strong>Utilisateur connecté :</strong>
+            <ul>
+              <li>POST <code>logout</code></li>
+              <li>GET <code>user/</code> (infos du compte)</li>
+              <li>POST <code>user/updatePassword</code>, <code>user/updateUsername</code>, <code>user/updateEmail</code></li>
+              <li>GET <code>user/photo</code></li>
+            </ul>
+          </li>
+          <li><strong>CRUD personnel de l’utilisateur :</strong>
+            <ul>
+              <li><code>Route::apiResource('artworks', UserArtworkController::class)</code></li>
+              <li><code>Route::apiResource('places', UserPlaceController::class)</code></li>
+              <li><code>Route::apiResource('heritages', UserHeritageController::class)</code></li>
+              <li>Chaque ressource offre toutes les méthodes CRUD pour l’utilisateur authentifié.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <ul>
+      <li>Dans <strong>Web/Admin</strong>, plusieurs ressources n’ont qu’une couverture partielle des opérations CRUD (pas de route DELETE, etc.).</li>
+      <li>Dans l’<strong>API publique</strong>, la plupart des ressources (artworks, places, etc.) sont seulement en READ (index, show). Pour la partie <strong>authentifiée</strong>, un utilisateur peut effectuer un CRUD complet sur ses propres éléments (user/artworks, user/places, user/heritages).</li>
+      <li><strong>Prochaines étapes :</strong> clarifier si des routes de création, mise à jour ou suppression sont nécessaires côté admin et/ou pour l’API publique, puis les implémenter.</li>
+    </ul>
+  </div>
       </div>
 
 </div>

@@ -2,16 +2,18 @@ body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #121212; /* Very dark background */
+      color: #f0f0f0;           /* Light text color */
     }
     nav {
-      background-color: #ffee81;
+      background-color: #1f1f1f;
       position: fixed;
       width: 100%;
     }
     nav a {
       float: left;
       display: block;
-      color: black;
+      color: #f0f0f0;
       text-align: center;
       padding: 10px 16px;
       text-decoration: none;
@@ -24,33 +26,33 @@ body {
       font-size: 16px;
       border: none;
       outline: none;
-      color: black;
+      color: #ffffff;
       padding: 14px 16px;
       background-color: inherit;
       font-family: inherit;
       margin: 0;
     }
     .navbar a:hover, .dropdown:hover .dropbtn {
-      background-color: #f9db07;
+      background-color: #8d885f;
     }
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: white;
+       background-color: #2b2b2b;
       min-width: 160px;
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
     .dropdown-content a {
       float: none;
-      color: black;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
       text-align: left;
+      color: #ffffff;
     }
     .dropdown-content a:hover {
-      background-color: #f9db07;
+      background-color: #8d885f;
     }
     .dropdown:hover .dropdown-content {
       display: block;
@@ -62,14 +64,16 @@ body {
       border-radius: 4px;
     }
     .weekly-header {
-      background-color: #f1f1f1;
       padding: 10px;
       cursor: pointer;
       font-weight: bold;
       text-align: center;
+      background-color: #333333;
+      color: #ffffff;
     }
     .report-content {
       display: none;
       padding: 10px 20px;
-      background-color: #fff;
+      background-color: #333333;
+      color: #ffffff;
     }
