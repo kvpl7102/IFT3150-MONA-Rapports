@@ -25,9 +25,8 @@
         <a href="#semaine7">Semaine 7</a>
         <a href="#semaine8">Semaine 8</a>
         <a href="#semaine9">Semaine 9</a>
-        <!-- 
-            
-            <a href="#semaine10">Semaine 10 (Mar 19- Mar 26)</a>
+        <a href="#semaine10">Semaine 10</a>
+        <!--           
             <a href="#semaine11">Semaine 11 (Mar 26- Avr 2)</a>
             <a href="#semaine12">Semaine 12 (Avr 2- Avr 9)</a>
             <a href="#semaine13">Semaine 13 (Avr 9- Avr 16)</a> -->
@@ -305,7 +304,7 @@ Validator::make($params, [
 
       <!-- Week 9 -->
       <div class="weekly-report" id="semaine9">
-  <div class="weekly-header">Semaine 9 *</div>
+  <div class="weekly-header">Semaine 9</div>
   <div class="report-content">
     <p>
       <strong>Rencontres avec Simon et Corélie :</strong><br>
@@ -502,6 +501,156 @@ Validator::make($params, [
   </div>
       </div>
 
+      <!-- Week 10 -->
+       <div class="weekly-report" id="semaine10">
+        <div class="weekly-header">Semaine 10 *</div>
+        <div class="report-content">
+          <p>
+          J'ai analysé et synthétisé l'état actuel des APIs routes afin de dresser la liste des fonctionnalités CRUD existantes et manquantes. L'objectif est de déterminer où des routes doivent être ajoutées ou complétées pour couvrir tous les besoins de création, lecture, mise à jour et suppression dans l’application.
+          </p>
+          <table>
+    <thead>
+        <tr>
+            <th>Controllers</th>
+            <th>Index</th>
+            <th>Create</th>
+            <th>Store</th>
+            <th>Show</th>
+            <th>Edit</th>
+            <th>Update</th>
+            <th>Destroy</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Artist (Admin)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Artist (API)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Artwork (Admin)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Artwork (API)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Place (Admin)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Place (API)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Heritage (Admin)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Heritage (API)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Badge (Admin)</td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>Badge (API)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>User (Admin)</td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+        <tr>
+            <td>User (API)</td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:green;">&#10003;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+            <td><span style="color:red;">&#10007;</span></td>
+        </tr>
+    </tbody>
+          </table>
+        <p><strong>Remarque :</strong></p>
+<ul>
+    <li>Dans <code>BadgeController</code> en admin, les actions "create" et "edit" renvoient aux pages de vue, mais ces pages n'existent pas.</li>
+    <li>Les routes API pour <code>Artworks (api/v3/artworks)</code>, <code>Place (api/v3/places)</code>, et <code>Badge (api/v3/badges)</code> renvoient une erreur car le fichier de chemin de ces routes n'existe pas.</li>
+</ul>
+        </div>
+       </div>
 </div>
 
 
